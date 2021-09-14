@@ -1,10 +1,13 @@
 import React from 'react';
 
 
-const Application = () => {
+const Application = (props) => {
+    console.log(props.cartItems)
+
     return (
+        
         <div>
-            
+           {props.cartItems.map((dog) => (<div>{dog.name}</div>))}
         </div>
     );
 };
