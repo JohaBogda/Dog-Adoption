@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Home = () => {
+const Home = (props) => {
+//    console.log(props)
     return (
         <div>
-           HOME
+            <h1>{props.reasons.reason}</h1>
+            <h2>{props.reasons.explanation}</h2>
+           {/*  */}
         </div>
     );
 };
