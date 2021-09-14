@@ -16,6 +16,35 @@ import Application from '../SidebarComp/Application';
 
 function App() {
 
+    const [contact, setContact] = useState(
+      [
+        {
+          organization: "Doggo Rescue Peeps",
+          street: "1 Main Street",
+          city: "Madeupcity, 00000, CA",
+          phone: "111-222-3333",
+          email: "doggorescuepeeps@gmail.com"
+        }
+      ]
+    )
+
+    const[whatToKnow, setWhatToKnow] = useState(
+      [
+        {
+          headline: "Heck of a lot of Work",
+          explanation: "Be sure you have time to exercise your pet, take care of their teeth, fur, and nails on a regular basis - just like a human. Depending on the type of dog this can be extremely time consuming - make sure you have a lot of time to spend with and on your dog!"
+        },
+        {
+          headline: "Cost & Fees",
+          explanation: "Dogs are a longterm investment. On average, people spend about $150/ per month for food and other basic necessities. This isn't including vet visits, flea and tick as well as heartworm prevention.. those additional expenses like check ups, vaccinations and emergency visits average at $1500 a year so make sure you have the budget to financially take care of a pet! "
+        },
+        {
+          headline: "We all have Personalities/ Baggage",
+          explanation: "Just like humans, dogs also have their own unique personalities and come with some kind of baggage which is why they landed at an adoption agency. Remember to be patient, and start training your dog immediately! The only reason a dog acts out is because of lack of empathy and training from its owners. Only humans are to blame."
+        },
+      ]
+    )
+
     const [reasons, setReasons] = useState(
 
       [
@@ -117,7 +146,7 @@ function App() {
                 </Route>
 
                 <Route exact path="/fees">
-                    <Fees />
+                    {whatToKnow.map(whatToKnow => <Fees whatToKnow = {whatToKnow} />)}
                 </Route>
 
                 <Route exact path="/application">
@@ -126,7 +155,8 @@ function App() {
             </Switch>
 
       <Header />
-      <Footer />
+      
+      {contact.map(contact => <Footer contact = {contact} />)}
       
 
     </div>

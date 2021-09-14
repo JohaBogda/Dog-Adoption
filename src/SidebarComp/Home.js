@@ -5,7 +5,7 @@ const Home = (props) => {
     return (
         <div>
             <h1>{props.reasons.reason}</h1>
-            <h2>{props.reasons.explanation}</h2>
+            <p>{props.reasons.explanation}</p>
            {/*  */}
         </div>
     );
