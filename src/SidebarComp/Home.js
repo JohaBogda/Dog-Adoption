@@ -4,9 +4,12 @@ const Home = (props) => {
 //    console.log(props)
     return (
         <div>
-            <h1>{props.reasons.reason}</h1>
-            <p>{props.reasons.explanation}</p>
-           {/*  */}
+        {props.reasons.map(item => 
+            <div>
+                <h1>{item.reason}</h1>
+                <p>{item.explanation}</p>
+             </div> ) }
+        
         </div>
     );
 };
