@@ -20,11 +20,17 @@ still have not been able to use an API as none of them actually worked
 Future Notes
 I'd really like to come back to this to actually implement everything I've had in mind which isn't possible due to various reasons at the moment. Things I'd like to achieve in the future:
 
-add API of list of adoptable dogs
+add API (or similar!?) of list of adoptable dogs
 
 be able to have them added to a "cart"
 
 apply for a visit/ adoption by filling out a form
+
+fix the page layout; sidebar is making it difficult to have things render in the middle of the page
+
+add pictures either from API or regular (unsure how to do it)
+
+add redux at the end of the finished project
 
 🚀 Link
 https://github.com/JohaBogda/Dog-Adoption.git
