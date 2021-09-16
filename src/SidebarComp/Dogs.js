@@ -3,29 +3,33 @@ import React from 'react';
 
 
 const Dogs = (props) => {
-console.log(props)
+    console.log(props)
 
 
     return (
 
-        <div>
-        {props.dogs.map(dog =>         
-        <div>
+        <div className="AllDogs">
+            {props.dogs.map(dog =>
+                <div className="EachDog">
 
-<h2>{dog.url}</h2>
-<h1>This is {dog.name} </h1>
-<h2><img src={dog.image} /> </h2>
-<h2>{dog.bio}</h2>
-<h2>Age: {dog.age}</h2>
-<h2>Gender: {dog.gender}</h2>
-<h2>Breed: {dog.breed}</h2>
-<h2>Fees: {dog.fees}</h2>
-<button onClick={() => props.addToCart(dog)} >Meet Me</button>
+                  <div className="buttonPosition">
+                    <h1>This is {dog.name} </h1>
+                    <button onClick={() => props.addToCart(dog)} >Meet Me</button>
+                    </div>
+                    <h2><img src={dog.image} /> </h2>
+                    <h2>{dog.bio}</h2>
 
-</div>)}
+                    <div className="stats">
+                        <h2>Age: <br/> {dog.age}</h2>
+                        <h2>Gender: <br/> {dog.gender}</h2>
+                        <h2>Breed: <br/> {dog.breed}</h2>
+                        <h2>Fees: <br/> {dog.fees}</h2>
+                    </div>
+                    
+                </div>)}
 
 
-</div>
+        </div>
     );
 };
 

@@ -206,9 +206,6 @@ const [breeds, setBreeds] = useState([])
   };
 
 
-  // const reasonsData = reasons.map(reasons => <Home something = {reasons} />)
-  // console.log(reasonsData)
-
   return (
     <div className="App" >
       <Header />
@@ -227,7 +224,7 @@ const [breeds, setBreeds] = useState([])
         </Route>
 
         <Route exact path="/fees">
-          {whatToKnow.map(whatToKnow => <Fees whatToKnow={whatToKnow} />)}
+          <Fees whatToKnow={whatToKnow} />
         </Route>
 
         <Route exact path="/info">

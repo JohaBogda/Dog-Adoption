@@ -12,9 +12,27 @@ li {
   /* text-decoration: wavy; */
   font-family: 'Courier New', Courier, monospace;
 }
-  
+ 
+.buttonPosition{
+  display: flex;
+  justify-content: space-between;
+}
+
 .link {
   text-decoration: none;
+  color: #a5616d;
+}
+
+.AllDogs {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.EachDog {
+  border: 2px snow dashed;
+  text-align: center;
 
 }
 
@@ -36,8 +54,8 @@ h3{
   height: 800%; wi */
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: 1fr  2fr;
-  grid-template-rows: 125px 4fr 100px;
+  grid-template-columns: 300px  2fr;
+  grid-template-rows: 125px 4fr 120px;
   grid-template-areas: 
   "Header  Header" 
   "Sidebar  .. " 
@@ -46,9 +64,16 @@ h3{
 
 img{
   border-radius: 15px;
-  border: rgb(94, 92, 92) 10px solid;
+  border: rgb(94, 92, 92) 4px solid;
   height: 200px;
+  width: 250px;
 
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
 }
 
 .Header{
@@ -57,7 +82,7 @@ img{
   grid-area: Header;
   text-align: center;
   color: #a5616d;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -68,17 +93,17 @@ img{
 }
 
 .Footer{
-  background-color: #4D6E9B;
+  background-color: #a5616d;
   grid-area: Footer;
 }
 
 button{
-  background-color: white;
+  background-color: #EEB5BF;
   border-radius: 5px;
-  color: #4D6E9B;
+  color: #a5616d;
   cursor: pointer;
-  /* transition: 500ms ease-in-out; */
-  
+  height: 30px;
+  width: 70px;
 }
 
 /* PETFINDER: */
