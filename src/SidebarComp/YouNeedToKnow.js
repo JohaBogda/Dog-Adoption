@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Fees = (props) => {
+const YouNeedToKnow = (props) => {
     return (
 
-        <div>
+        <div className="YouNeedToKnow">
             {props.whatToKnow.map(item =>
-                <div>
+                <div className="YouNeedToKnowText">
                     <h1>{item.headline}</h1>
                     <p>{item.explanation}</p>
                 </div>)}
@@ -14,4 +14,4 @@ const Fees = (props) => {
     );
 };
 
-export default Fees;
+export default YouNeedToKnow;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Application = () => {
+const Questions = () => {
     return (
         <div>
             <h2>Send us your info - we'll get in touch within 24hrs:</h2>
@@ -12,4 +12,4 @@ const Application = () => {
     );
 };
 
-export default Application;
+export default Questions;

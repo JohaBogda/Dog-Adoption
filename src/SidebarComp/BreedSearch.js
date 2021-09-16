@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 
-const DogKnowledge = (props) => {
+const BreedSearch = (props) => {
 
     const [breedSearch, setBreedSearch] = useState("")
 
-    const [currentBreed,setCurrentBread] = useState({})
+    const [currentBreed,setCurrentBreed] = useState({})
 
+    // handleChange takes the event object as the argument & sets the curent value of the form to the breedSearch using setBreedSearch
     const handleChange = (event) => {
         setBreedSearch (event.target.value) 
     }
@@ -15,6 +17,12 @@ const DogKnowledge = (props) => {
         // look through array props.breeds
         // if props.breeds.name matches breedSearch 
         // then set currentBreed to that item 
+
+        // TRY2: 
+        // useEffect(() => {
+        // const results = props.breed.map(breed => breed.toLowerCase().includes(breedSearch));
+        // setCurrentBreed(results);
+        // }, [searchBreed]);
 
         // TRY 1: 
         // {props.breeds.map(item) => {
@@ -46,4 +54,4 @@ const DogKnowledge = (props) => {
     );
 };
 
-export default DogKnowledge;
+export default BreedSearch;
