@@ -14,7 +14,7 @@ const Dogs = (props) => {
 
                   <div className="buttonPosition">
                     <h1>This is {dog.name} </h1>
-                    <button onClick={() => props.addToCart(dog)} >Meet Me</button>
+                    <button onClick={() => props.meetMe(dog)} >Meet Me</button>
                     </div>
                     <h2><img src={dog.image} /> </h2>
                     <h2>{dog.bio}</h2>

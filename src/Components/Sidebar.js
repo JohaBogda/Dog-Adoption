@@ -10,7 +10,7 @@ const Sidebar = () => {
             <li><Link to="/fees" className="link">Everything You Need To Know</Link> </li>
             <li><Link to="/info" className="link">Check out Dog Breeds To Match Your Lifestyle</Link> </li>
             <li><Link to="/dogs" className="link">Adoptable Dogs</Link> </li>
-            <li><Link to="/application" className="link">Apply now!</Link> </li>
+            <li><Link to="/application" className="link">Questions?</Link> </li>
             </ul>
             
         </div>

@@ -106,6 +106,24 @@ button{
   width: 70px;
 }
 
+
+
+#submit {
+  background-color: #EEB5BF;
+  border-radius: 5px;
+  color: #a5616d;
+  cursor: pointer;
+  height: 30px;
+  width: 70px;
+  margin: 5px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
 /* PETFINDER: */
 /* URL: 
 https://api.petfinder.com/v2/animals
