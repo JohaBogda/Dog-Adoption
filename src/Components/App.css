@@ -2,7 +2,11 @@ div {
   border-radius: 15px;
   padding: 1%;
   color: white;
-  
+}
+
+.reasonsHeadline {
+  text-decoration: underline;
+  color: gray;
 }
 
 li {
@@ -20,7 +24,8 @@ li {
 }
 
 .YouNeedToKnowText {
-  width: 50%
+  width: 40%;
+  color: black;
 }
 
 .home {

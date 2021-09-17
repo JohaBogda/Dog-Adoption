@@ -6,7 +6,7 @@ const Home = (props) => {
         <div>
         {props.reasons.map(item => 
             <div>
-                <h1>{item.reason}</h1>
+                <h1 className="reasonsHeadline">{item.reason}</h1>
                 <p>{item.explanation}</p>
              </div> ) }
         

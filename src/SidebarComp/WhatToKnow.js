@@ -1,6 +1,6 @@
 import React from 'react';
 
-const YouNeedToKnow = (props) => {
+const WhatToKnow = (props) => {
     return (
 
         <div className="YouNeedToKnow">
@@ -14,4 +14,4 @@ const YouNeedToKnow = (props) => {
     );
 };
 
-export default YouNeedToKnow;
+export default WhatToKnow;

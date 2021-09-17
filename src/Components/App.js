@@ -17,9 +17,9 @@ import Doberman from "../Images/DobermanPinscher.jpeg"
 import { Switch, Route, useHistory } from "react-router-dom"
 import Home from "../SidebarComp/Home"
 import Reasons from "../SidebarComp/Reasons"
-import Fees from "../SidebarComp/YouNeedToKnow"
+import WhatToKnow from "../SidebarComp/WhatToKnow"
 import Dogs from "../SidebarComp/Dogs"
-import WhatToKnow from "../SidebarComp/BreedSearch"
+import BreedSearch from "../SidebarComp/BreedSearch"
 import Application from "../SidebarComp/Questions"
 import MeetMe from "../SidebarComp/MeetMe"
 
@@ -245,15 +245,15 @@ function App() {
           <Dogs dogs={dogs} meetMe={meetMe} />
         </Route>
 
-        <Route exact path="/fees">
-          <Fees whatToKnow={whatToKnow} />
+        <Route exact path="/whattoknow">
+          <WhatToKnow whatToKnow={whatToKnow} />
         </Route>
 
-        <Route exact path="/info">
-          <WhatToKnow breeds={breeds} />
+        <Route exact path="/breeds">
+          <BreedSearch breeds={breeds} />
         </Route>
 
-        <Route exact path="/application">
+        <Route exact path="/questions">
           <Application />
         </Route>
 

@@ -17,6 +17,9 @@ used multiple components of which some will need state/ props rendering
 
 still have not been able to use an API as none of them actually worked
 
+Websites used to for review: 
+https://www.freecodecamp.org/news/beginner-react-project-build-basic-forms-using-react-hooks/
+
 Future Notes
 I'd really like to come back to this to actually implement everything I've had in mind which isn't possible due to various reasons at the moment. Things I'd like to achieve in the future:
 
