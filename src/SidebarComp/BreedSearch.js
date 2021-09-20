@@ -5,35 +5,32 @@ const BreedSearch = (props) => {
 
     const [breedSearch, setBreedSearch] = useState("")
 
-    const [currentBreed, setCurrentBreed] = useState({})
+    const [currentBreedList, setCurrentBreedList] = useState([{ name: "" }])
 
     // handleChange takes the event object as the argument & sets the curent value of the form to the breedSearch using setBreedSearch
     const handleChange = (event) => {
         // console.log shows each letter renders in console
         // console.log(event.target.value)
         setBreedSearch(event.target.value)
+        checkBreeds(event.target.value)
+    }
+
+    const checkBreeds = (name) => {
+        let nameArray = name.split("")
+        console.log(nameArray)
+        // filter method; with split method = splits array into individual characters
+        // list of breeds
+        // filter = shows true/falls to whatever we type in
+        // slice = 1 parameter where it starts; second whre it shoudl end (length = entire array) = getting first character; length = number of characters 
+        // every = checks every element in array that passes condition => returns true or false then; 
+        let filteredBreeds = props.breeds.filter(breed => breed.name.split("").slice(0, nameArray.length).every((letter, index) => letter.toLowerCase() === nameArray[index].toLowerCase())) //.length=== nameArray.length) //letter === nameArray[index].toLowerCase()
+        setCurrentBreedList(filteredBreeds)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        // look through array props.breeds
-        // if props.breeds.name matches breedSearch 
-        // then set currentBreed to that item 
+        checkBreeds(breedSearch)
 
-        // TRY2: 
-        // useEffect(() => {
-        // const results = props.breed.map(breed => breed.toLowerCase().includes(breedSearch));
-        // setCurrentBreed(results);
-        // }, [searchBreed]);
-
-        // TRY 1: 
-        // {props.breeds.map(item) => {
-        //     if props.breeds.name === breedSearch {
-        //         currentBreed === item
-        //     }
-        // }}
-
-        // then conditionally render currentBreed on line 42
     }
 
     // console.log(props.breeds)
@@ -45,16 +42,33 @@ const BreedSearch = (props) => {
                 <button type="submit">Submit</button>
             </form>
 
-            <select>
-                {props.breeds.map(item => (
+            {currentBreedList.map(item => (
+
+                // key={item.value}
+                // value={item.value}
+
+                <div>    <p>{item.name}</p>
+
+{
+                item.name === "" ? "" : <img src={item.image.url} alt={item.name} />
+            } </div>
+
+            ))}
+
+            {/* {currentBreedList.map(item => (
+                {item.name}
+            ))} */}
+
+            {/* <select>
+                {currentBreedList.map(item => (
                     <option
                         // key={item.value}
                         // value={item.value}
                     >
-                        {props.name}
+                        {item.name}
                     </option>
                 ))}
-            </select>
+            </select> */}
 
             {/* {props.breeds.map(breed =>             
             <h1>Breed: {breed.name}</h1>

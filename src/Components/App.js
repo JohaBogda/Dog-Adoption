@@ -195,8 +195,11 @@ function App() {
     const url = "https://api.thedogapi.com/v1/breeds"
     fetch(url)
       .then(response => response.json())
-      .then(response => setBreeds(response))
-    // empty [] means it'll only render once:
+      .then(response => {
+        setBreeds(response)
+      // console.log(response)
+    })
+    // empty [] msole.log(breeds)eans it'll only render once:
   }, [])
 
   // need a state in order to use API:

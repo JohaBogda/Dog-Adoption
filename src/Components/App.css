@@ -9,6 +9,10 @@ div {
   color: gray;
 }
 
+.questions {
+  border: 1px solid #a5616d;
+}
+
 li {
   list-style-type: none;
   text-align: left;
@@ -103,7 +107,7 @@ img{
   grid-area: Header;
   text-align: center;
   color: #a5616d;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
 }
 
