@@ -4,6 +4,25 @@ div {
   color: white;
 }
 
+.breed{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.breedResults{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+#breed{
+  display: flex;
+  flex-direction: column;
+}
+
 .reasonsHeadline {
   text-decoration: underline;
   color: gray;
@@ -132,7 +151,7 @@ button{
   border-radius: 5px;
   color: #a5616d;
   cursor: pointer;
-  height: 30px;
+  height: 40px;
   width: 70px;
 }
 
