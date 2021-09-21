@@ -23,6 +23,13 @@ import BreedSearch from "../SidebarComp/BreedSearch"
 import Application from "../SidebarComp/Questions"
 import MeetMe from "../SidebarComp/MeetMe"
 
+// REDUX:
+// const mapStateToProps = () => {
+  // return {
+//   dog:state.dogReducer.dogData
+  // }
+// }
+
 
 function App() {
 

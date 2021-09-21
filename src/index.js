@@ -5,11 +5,19 @@ import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from "react-router-dom";
 
+// AXIOS NOTES: 
+// import { Provider } from "react-redux"
+// then wrap the router in the provider + store={store}
+// import store from "./store"
+
+
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Provider store={store}> */}
     <Router>
     <App />
     </ Router>
+    {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
