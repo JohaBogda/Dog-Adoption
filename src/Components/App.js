@@ -12,6 +12,8 @@ import Chihuahua from "../Images/Chihuahua.jpeg"
 import Chow from "../Images/chow.jpeg"
 import Doberman from "../Images/DobermanPinscher.jpeg"
 
+// Context-Provider (variable name chosen by me):
+import DataContext from "../contexts/DataContext"
 
 // Sidebar: 
 import { Switch, Route, useHistory } from "react-router-dom"
@@ -23,11 +25,11 @@ import BreedSearch from "../SidebarComp/BreedSearch"
 import Application from "../SidebarComp/Questions"
 import MeetMe from "../SidebarComp/MeetMe"
 
-// REDUX:
+// REDUX - NOT USING: 
 // const mapStateToProps = () => {
-  // return {
+// return {
 //   dog:state.dogReducer.dogData
-  // }
+// }
 // }
 
 
@@ -204,9 +206,9 @@ function App() {
       .then(response => response.json())
       .then(response => {
         setBreeds(response)
-      // console.log(response)
-    })
-    // empty [] msole.log(breeds)eans it'll only render once:
+        // console.log(response)
+      })
+    // empty [] means it'll only render once:
   }, [])
 
   // need a state in order to use API:
@@ -215,11 +217,11 @@ function App() {
   // ====================== CLICK ON MEET ME BUTTON AND HAVE dogs render on separate page: ===========================
   // create a new state with (technically) empty object to have the clicked button's info rendered:
   const [currentDog, setCurrentDog] = useState({
-    // if just default true, then once you refresh the same page appears empty without the propped values 
+    // if default true, then once you refresh the same page appears empty without the propped values 
     default: true
   })
 
-  // {history} is an actual method; keeps track of pages & redirects to other pages; stops peeps from getting to a page they shoulnd't have access to
+  // {history} is a method; keeps track of pages & redirects to other pages; stops peeps from getting to a page they shoulnd't have access to
   const history = useHistory()
 
   // method for button
@@ -233,41 +235,45 @@ function App() {
 
   return (
     <div className="App" >
+      {/* Context-Provider; takes in variable and function; no limit to amount of inputs: */}
+      <DataContext.Provider value={{ dogs, meetMe }}>
 
-      <Header />
+        <Header />
 
-      <Sidebar />
-      <Switch>
+        <Sidebar />
+        <Switch>
 
-        <Route exact path="/">
-          <Home />
-        </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-        <Route exact path="/reasons">
-          <Reasons reasons={reasons} />
-        </Route>
+          <Route exact path="/reasons">
+            <Reasons reasons={reasons} />
+          </Route>
 
-        <Route exact path="/meetme">
-          <MeetMe dog={currentDog} />
-        </Route>
+          <Route exact path="/meetme">
+            <MeetMe dog={currentDog} />
+          </Route>
 
-        <Route exact path="/dogs">
-          <Dogs dogs={dogs} meetMe={meetMe} />
-        </Route>
+          <Route exact path="/dogs">
+            <Dogs dogs={dogs} meetMe={meetMe} />
+          </Route>
 
-        <Route exact path="/whattoknow">
-          <WhatToKnow whatToKnow={whatToKnow} />
-        </Route>
+          <Route exact path="/whattoknow">
+            <WhatToKnow whatToKnow={whatToKnow} />
+          </Route>
 
-        <Route exact path="/breeds">
-          <BreedSearch breeds={breeds} />
-        </Route>
+          <Route exact path="/breeds">
+            <BreedSearch breeds={breeds} />
+          </Route>
 
-        <Route exact path="/questions">
-          <Application />
-        </Route>
+          <Route exact path="/questions">
+            <Application />
+          </Route>
 
-      </Switch>
+        </Switch>
+        {/* </MeetMeContext.Provider> */}
+      </DataContext.Provider>
 
 
       {/* another way to map through a state (array with object) */}
